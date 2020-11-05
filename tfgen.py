@@ -32,9 +32,9 @@ def write_files():
     """
 
     backend_config = f"""bucket="around-tfstate-{environment}"
-    dynamodb_table="apps/{app_name}/terraform.tfstate"
+    dynamodb_table="around-tfstate-{environment}"
     region="{region}"
-    key="around-tfstate-{environment}"
+    key="apps/{app_name}/terraform.tfstate"
     """
 
     f = open(path + "/variables.tf", "w+")
